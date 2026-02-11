@@ -1,0 +1,58 @@
+{
+  "kind": "build_request",
+  "title": "Fix missing logo and make 'PBR Projects' prominent on homepage hero",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-8",
+      "text": "Fix the site branding logo so it reliably displays in both the header and footer using the user-provided logo image, ensuring the referenced path `/assets/brand/pbr-projects-logo.png` resolves correctly in production builds.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "The logo is not being shown",
+          "... definitely use this logo."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header displays the logo image on all screen sizes (no broken image icon).",
+        "Footer displays the logo image (no broken image icon).",
+        "The logo file is present at `frontend/public/assets/brand/pbr-projects-logo.png` (or the code is updated to match the actual shipped asset path) and loads via direct navigation to that URL."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Update the homepage hero (top section) headline to prominently display the text \"PBR Projects\" in large letters, while keeping supporting tagline copy below it (English).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "make sure that the 'PBR Projects' Text is written in big letters in the homepage"
+        ]
+      },
+      "acceptanceCriteria": [
+        "In the hero section, the largest headline text includes exactly \"PBR Projects\" and is visually dominant (larger than surrounding text) on mobile and desktop.",
+        "The hero section remains responsive and does not overflow or clip the headline on common breakpoints."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under `frontend/src/components/ui` (compose them instead).",
+    "Do not edit immutable hook entrypoints: `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useInternetIdentity.tsx`, `frontend/src/hooks/useActor.ts`, `frontend/src/main.tsx`.",
+    "Backend must remain single-actor; only add `backend/migration.mo` if a state upgrade is required."
+  ],
+  "nonGoals": [
+    "Do not add new pages or new navigation sections beyond fixing the logo and hero title prominence.",
+    "Do not change enquiry backend behavior or data model as part of this request."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Gold-and-charcoal \"PBR Projects\" logo mark on a white background (pbr-projects-logo.dim_800x800.png)"
+    ],
+    "edits": []
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Restore branding logo and emphasize 'PBR Projects' in homepage hero",
+  "requirements": [
+    {
+      "id": "REQ-8",
+      "summary": "Ensure the PBR Projects logo reliably loads in header and footer with a correct production-safe asset path.",
+      "acceptanceCriteria": [
+        "Header displays the logo image on all screen sizes (no broken image icon).",
+        "Footer displays the logo image (no broken image icon).",
+        "The logo file is present at `frontend/public/assets/brand/pbr-projects-logo.png` (or the code is updated to match the actual shipped asset path) and loads via direct navigation to that URL."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/pbr-projects-logo.dim_800x800.png",
+          "operation": "create",
+          "description": "Add the required generated logo asset (Gold-and-charcoal \"PBR Projects\" logo mark on a white background) as a static public asset at this exact path and filename."
+        },
+        {
+          "path": "frontend/public/assets/brand/pbr-projects-logo.png",
+          "operation": "create",
+          "description": "Add the production-served branding logo file at the exact path expected by the app. Ensure this file matches the intended shipped logo (e.g., copy/rename from `frontend/public/assets/generated/pbr-projects-logo.dim_800x800.png`) so `/assets/brand/pbr-projects-logo.png` resolves in production builds."
+        },
+        {
+          "path": "frontend/src/lib/assetPaths.ts",
+          "operation": "create",
+          "description": "Create a small helper that builds asset URLs using the app base path (e.g., via `import.meta.env.BASE_URL`) to make logo references robust in production deployments."
+        },
+        {
+          "path": "frontend/src/components/site/Header.tsx",
+          "operation": "modify",
+          "description": "Update the header logo `img` to use the shared base-aware asset helper for `/assets/brand/pbr-projects-logo.png`, ensuring it renders reliably across environments."
+        },
+        {
+          "path": "frontend/src/components/site/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the footer logo `img` to use the shared base-aware asset helper for `/assets/brand/pbr-projects-logo.png`, ensuring it renders reliably across environments."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Make the homepage hero headline prominently display \"PBR Projects\" as the largest text while keeping an English tagline below.",
+      "acceptanceCriteria": [
+        "In the hero section, the largest headline text includes exactly \"PBR Projects\" and is visually dominant (larger than surrounding text) on mobile and desktop.",
+        "The hero section remains responsive and does not overflow or clip the headline on common breakpoints."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/site/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Replace the hero headline content so the largest text includes exactly \"PBR Projects\" and move the supporting tagline to the text below, keeping the section responsive (adjust Tailwind typography/line wrapping as needed to avoid overflow/clipping)."
+        }
+      ]
+    }
+  ]
+}

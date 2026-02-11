@@ -1,0 +1,18 @@
+{
+  "frontend/src/App.tsx": "Main application component managing category and location state, rendering header, hero, projects section, enquiry section, and footer.",
+  "frontend/src/components/site/Header.tsx": "Sticky header component displaying PBR Projects logo via production-safe asset path helper and navigation with smooth scroll functionality.",
+  "frontend/src/components/site/Footer.tsx": "Footer component with logo loaded via production-safe asset path helper, location links, social media icons, and attribution with UTM tracking.",
+  "frontend/src/components/site/HeroSection.tsx": "Hero section with background image, prominently displaying \"PBR Projects\" as the largest headline text (6xl-8xl), followed by tagline, CTAs, and feature highlights.",
+  "frontend/src/components/projects/ProjectsSection.tsx": "Projects section container managing filtered project display with category toggle and location filter controls.",
+  "frontend/src/components/projects/CategoryToggle.tsx": "Toggle component for switching between Residential and Commercial property categories with visual active state.",
+  "frontend/src/components/projects/LocationFilter.tsx": "Location filter component with pill buttons for Kochi, Trivandrum, and Calicut with clear functionality.",
+  "frontend/src/components/projects/ProjectsList.tsx": "Grid layout component rendering project cards with empty state handling.",
+  "frontend/src/components/projects/ProjectCard.tsx": "Individual project card displaying image, name, location, description, category badge, and status.",
+  "frontend/src/components/enquiry/EnquirySection.tsx": "Enquiry section with contact information card and enquiry form, passing browsing context to form.",
+  "frontend/src/components/enquiry/EnquiryForm.tsx": "Form component with name, email, message fields, validation, loading states, success/error feedback, and backend submission.",
+  "frontend/src/hooks/useQueries.ts": "React Query hook for submitting enquiries to the backend with mutation and cache invalidation.",
+  "frontend/src/data/sampleProjects.ts": "Sample project data with 9 projects across all categories and locations with realistic descriptions and images.",
+  "frontend/src/index.css": "Global styles with warm bronze/gold OKLCH color system for light and dark modes aligned with PBR Projects branding.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended theme for warm neutral palette, custom border radius, and typography settings.",
+  "frontend/src/lib/assetPaths.ts": "Helper utility that builds production-safe asset URLs using the app base path from environment variables."
+}

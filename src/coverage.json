@@ -1,0 +1,60 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-11T20:23:37.706Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-8",
+        "summary": "Fix the site branding logo so it reliably displays in both the header and footer using the user-provided logo image, ensuring the referenced path `/assets/brand/pbr-projects-logo.png` resolves correctly in production builds.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/pbr-projects-logo.dim_800x800.png",
+          "frontend/public/assets/brand/pbr-projects-logo.png",
+          "frontend/src/lib/assetPaths.ts",
+          "frontend/src/components/site/Header.tsx",
+          "frontend/src/components/site/Footer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/pbr-projects-logo.dim_800x800.png",
+          "frontend/src/lib/assetPaths.ts",
+          "frontend/src/components/site/Header.tsx",
+          "frontend/src/components/site/Footer.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Update the homepage hero (top section) headline to prominently display the text \"PBR Projects\" in large letters, while keeping supporting tagline copy below it (English).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/site/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/site/HeroSection.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/pbr-projects-logo.dim_800x800.png",
+    "frontend/src/components/site/Footer.tsx",
+    "frontend/src/components/site/Header.tsx",
+    "frontend/src/components/site/HeroSection.tsx",
+    "frontend/src/lib/assetPaths.ts",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

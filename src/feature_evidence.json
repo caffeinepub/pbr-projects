@@ -1,0 +1,43 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-fix-the-site-branding-logo-so-it-reliably-displays-in-both-the-header-and-footer-using-the-user-provided-logo-image-ensuring-the-referenced-path-assets-brand-pbr-projects-logo-png-resolves-correctly-in-production-builds",
+      "featureTitle": "Fix the site branding logo so it reliably displays in both the header and footer using the user-provided logo image, ensuring the referenced path `/assets/brand/pbr-projects-logo.png` resolves correctly in production builds.",
+      "files": [
+        "frontend/src/components/site/Footer.tsx",
+        "frontend/src/components/site/Header.tsx",
+        "frontend/src/lib/assetPaths.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-homepage-hero-top-section-headline-to-prominently-display-the-text-pbr-projects-in-large-letters-while-keeping-supporting-tagline-copy-below-it-english",
+      "featureTitle": "Update the homepage hero (top section) headline to prominently display the text \"PBR Projects\" in large letters, while keeping supporting tagline copy below it (English).",
+      "files": [
+        "frontend/src/components/site/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

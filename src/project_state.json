@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Website for real estate business \"PBR Projects\" using provided logo, featuring Residential/Commercial options, location listings (Kochi, Trivandrum, Calicut), sample project listings, and an enquiry form.",
+  "architectural_notes": [
+    "Ensure the provided logo asset is correctly referenced and rendered in the header/footer (verify import/path, build bundling, and add a fallback/alt)."
+  ],
+  "known_issues": [
+    "Logo is not being displayed on the site (likely broken asset reference or bundling issue)."
+  ],
+  "isFixRequest": true,
+  "imageRequirements": "## Required Images\n- Gold-and-charcoal \"PBR Projects\" logo mark on a white background (pbr-projects-logo.dim_800x800.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-marketing-website-for-the-real-estate-business-named-pbr-projects-and-use-the-uploaded-logo-image-as-the-site-brand-mark-in-the-header-and-footer",
+      "title": "Create a responsive marketing website for the real estate business named “PBR Projects” and use the uploaded logo image as the site brand mark in the header and footer.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-clear-navigation-and-browsing-ui-that-provides-property-category-options-residential-and-commercial-and-allows-users-to-browse-projects-by-those-categories",
+      "title": "Implement a clear navigation and browsing UI that provides property category options “Residential” and “Commercial” and allows users to browse projects by those categories.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-location-options-kochi-trivandrum-and-calicut-and-allow-users-to-filter-browse-the-project-list-by-these-locations",
+      "title": "Add location options “Kochi”, “Trivandrum”, and “Calicut” and allow users to filter/browse the project list by these locations.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-projects-section-page-that-lists-a-few-sample-projects-with-basic-fields-sufficient-for-browsing-at-minimum-project-name-category-location-short-description",
+      "title": "Create a “Projects” section/page that lists a few sample projects with basic fields sufficient for browsing (at minimum: project name, category, location, short description).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-enquiry-form-that-collects-lead-details-and-submits-them-to-the-backend-for-storage-showing-an-in-ui-success-failure-state-after-submission",
+      "title": "Add an enquiry form that collects lead details and submits them to the backend for storage, showing an in-UI success/failure state after submission.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-visual-theme-appropriate-for-a-real-estate-brand-aligning-with-the-uploaded-logo-styling-use-a-warm-neutral-palette-e-g-gold-bronze-accents-charcoal-text-light-backgrounds-consistent-typography-and-clean-card-based-layout-across-all-sections",
+      "title": "Apply a cohesive visual theme appropriate for a real estate brand, aligning with the uploaded logo styling; use a warm neutral palette (e.g., gold/bronze accents, charcoal text, light backgrounds), consistent typography, and clean card-based layout across all sections.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-site-branding-logo-so-it-reliably-displays-in-both-the-header-and-footer-using-the-user-provided-logo-image-ensuring-the-referenced-path-assets-brand-pbr-projects-logo-png-resolves-correctly-in-production-builds",
+      "title": "Fix the site branding logo so it reliably displays in both the header and footer using the user-provided logo image, ensuring the referenced path `/assets/brand/pbr-projects-logo.png` resolves correctly in production builds.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-homepage-hero-top-section-headline-to-prominently-display-the-text-pbr-projects-in-large-letters-while-keeping-supporting-tagline-copy-below-it-english",
+      "title": "Update the homepage hero (top section) headline to prominently display the text \"PBR Projects\" in large letters, while keeping supporting tagline copy below it (English).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create website for real estate business named \"PBR Projects\" (use attached logo/branding).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add property category navigation/options: Residential and Commercial.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add location options/listings: Kochi, Trivandrum, Calicut (for browsing/filtering projects).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Display a few sample real estate projects on the site.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Include an enquiry form for user leads.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Implement backend Motoko APIs and stable storage for enquiries, including a create endpoint used by the frontend (and optionally a list endpoint for debugging during development).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Make the homepage show a large, prominent 'PBR Projects' title/hero heading.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "PBR Projects",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
